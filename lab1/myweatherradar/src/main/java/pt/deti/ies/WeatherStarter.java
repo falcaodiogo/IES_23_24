@@ -14,14 +14,14 @@ import java.util.Scanner;
 public class WeatherStarter {
 
     //todo: should generalize for a city passed as argument
-    // private static final int CITY_ID_AVEIRO = 1010500;
+    private static final int CITY_ID_AVEIRO = 1010500;
 
     public static void  main(String[] args ) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Hello, input a city code: ");
-        int CITY_ID_AVEIRO = sc.nextInt();
+        // System.out.println("Hello, input a city code: ");
+        // int CITY_ID_AVEIRO = sc.nextInt();
 
         // get a retrofit instance, loaded with the GSon lib to convert JSON into objects
         Retrofit retrofit = new Retrofit.Builder()
@@ -41,7 +41,7 @@ public class WeatherStarter {
             if (forecast != null) {
                 CityForecast firstDay = forecast.getData().listIterator().next();
 
-                System.out.printf( "The max temperature for %s is %4.1f degrees! %n",
+                System.out.printf( "The max temperature in Aveiro for %s is %4.1f degrees! %n",
                         firstDay.getForecastDate(),
                         Double.parseDouble(firstDay.getTMax()));
             } else {
