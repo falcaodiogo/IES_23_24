@@ -5,3 +5,16 @@ links, maybe paste some key visuals on the topics being addressed, etc. Think of
 as a “notes to self” resource, explaining and summarizing the key concepts and practices of the 
 lab.
 
+
+## Ex3
+### alínea e
+Para mudar o nível do logger de level "info" para "debug" e mostrar as respetivas mensagens:
+logger.debug("Debug Message Logged !!!");
+logger.info("Info Message Logged !!!");
+em
+<Loggers>
+    	<!--        AQUI -->
+        <Root level="debug" additivity="false">
+            <AppenderRef ref="console" />
+        </Root>
+</Loggers>

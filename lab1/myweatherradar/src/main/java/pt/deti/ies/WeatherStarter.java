@@ -4,8 +4,8 @@ import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import pt.deti.ies.IpmaCityForecast; 
-import pt.deti.ies.IpmaService;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import java.util.Scanner;
 
 /**
@@ -16,7 +16,11 @@ public class WeatherStarter {
     //todo: should generalize for a city passed as argument
     private static final int CITY_ID_AVEIRO = 1010500;
 
+    private static final Logger logger = LogManager.getLogger(WeatherStarter.class);
+
     public static void  main(String[] args ) {
+
+        logger.debug("Debug Message Logged !!!");
 
         Scanner sc = new Scanner(System.in);
 
@@ -41,6 +45,8 @@ public class WeatherStarter {
             if (forecast != null) {
                 CityForecast firstDay = forecast.getData().listIterator().next();
 
+                logger.info("Info Message Logged !!!");
+
                 System.out.printf( "The max temperature in Aveiro for %s is %4.1f degrees! %n",
                         firstDay.getForecastDate(),
                         Double.parseDouble(firstDay.getTMax()));
@@ -49,7 +55,9 @@ public class WeatherStarter {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
+            logger.error("Error Message Logged !!!", new NullPointerException("NullError"));
         }
+        
 
         sc.close();
 
