@@ -18,3 +18,18 @@ em
             <AppenderRef ref="console" />
         </Root>
 </Loggers>
+-> funciona por hierarquia, se tiver o debug, apresenta o info também!!
+error, warning, info e debug são os níveis existentes.
+Recomenda-se usar o logger, em vez do SOUT para fazer debug
+
+### alínea f
+git log --reverse mostra o histórico dos commits
+
+## Ex4
+Docker is an open source platform that enables developers to build, deploy, run, update and manage containers—standardized, executable components that combine application source code with the operating system (OS) libraries and dependencies required to run that code in any environment.
+
+-> A container is a sandboxed process running on a host machine that is isolated from all other processes running on that host machine.
+
+-> Quando aparece o erro: Error saving credentials: error storing credentials - err: exit status 1, out: `error getting credentials - err: exit status 1, out: `exit status 2: gpg: decryption failed: No secret key“
+ 
+significa que é preciso trocar entre o dcoker cliente e o docker daemon com este comando: `docker context ls`
