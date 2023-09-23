@@ -62,7 +62,7 @@ public class AnyCityForecast {
 
                 try {
                     CityForecast forecast = WeatherStarter.getTempo(cityCode);
-                    System.out.println(forecast);
+                    System.out.println(forecast + "\n");
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

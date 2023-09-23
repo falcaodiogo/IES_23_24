@@ -108,7 +108,14 @@ public class CityForecast {
         this.latitude = latitude;
     }
 
-    // public String toString(Double temperature) {
-    //     return "Temperature: " + temperature;
-    // }
+    @Override
+    public String toString() {
+        return "Today's Forecast:\n" +
+            "Precipitation Probability: " + precipitaProb + "\n" +
+            "Min Temperature: " + tMin + "\n" +
+            "Max Temperature: " + tMax + "\n" +
+            "Predicted Wind Direction: " + predWindDir + "\n" +
+            "Wind Speed Class: " + classWindSpeed;
+    }
+
 }
