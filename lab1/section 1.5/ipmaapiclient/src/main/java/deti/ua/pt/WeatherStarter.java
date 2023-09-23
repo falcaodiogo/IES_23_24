@@ -30,9 +30,8 @@ public class WeatherStarter {
             IpmaCityForecast forecast = apiResponse.body();
 
             if (forecast != null) {
-                CityForecast firstDay = forecast.getData().listIterator().next();
 
-                return firstDay;
+                return forecast.getData().listIterator().next();
 
             } else {
                 System.out.println( "No results for this request!");
@@ -41,5 +40,6 @@ public class WeatherStarter {
             ex.printStackTrace();
         }
         return null;
+        
     }
 }

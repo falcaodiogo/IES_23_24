@@ -107,4 +107,8 @@ public class CityForecast {
     public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
+
+    // public String toString(Double temperature) {
+    //     return "Temperature: " + temperature;
+    // }
 }
