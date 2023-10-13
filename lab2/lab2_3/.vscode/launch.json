@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<lab2.3>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "deti.ua.pt.lab23.Ex1.Application",
+            "projectName": "lab2.3",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

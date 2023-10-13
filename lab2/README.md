@@ -139,3 +139,17 @@ Explique a ideia de um "Perfil Web" em Jakarta EE e quando ele é apropriado.
 Como você pode criar um serviço web (API REST) para oferecer citações aleatórias usando Jakarta EE?
 Quais são os três endpoints necessários para este serviço e qual é a finalidade de cada um?
 Como você formataria as respostas deste serviço web?
+
+*****************************************************************************
+
+## Ex 2.4
+
+-> Controler:
+private static final String quote = "Hello, gorgeous.";
+	private final AtomicLong counter = new AtomicLong();
+
+	@GetMapping("/api/quote")
+	**************** mudamos aqui o url
+	public Greeting greeting() {
+		return new Greeting(counter.incrementAndGet(), quote);
+	}
