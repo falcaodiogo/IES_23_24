@@ -36,7 +36,7 @@ public class APIController {
 
 		return new Show(counter.incrementAndGet(), randomString);
 	}
-q
+
 	// static
 	@GetMapping("/api/quotes")
     public String quotes(@RequestParam(name = "show", required = true, defaultValue = "could not find a movie") String show, Model model) {
