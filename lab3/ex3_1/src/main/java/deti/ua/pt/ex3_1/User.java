@@ -16,6 +16,16 @@ public class User {
     @NotBlank(message = "Email is mandatory")
     private String email;
 
+    private int phone;
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
     public String getName() {
         return name;
     }
