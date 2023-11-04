@@ -37,9 +37,11 @@ private String email;
 
 ## Ex3.2
 
-Image is anexed in this directory for exercise 3.2g)
+### g)
 
-### Ex3.2 h) 
+Image is anexed in this directory for exercise.
+
+### h) 
 ```java
 @Override
 public List<Employee> getEmployeesByEmail(String email) {
@@ -51,4 +53,11 @@ and
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     List<Employee> getEmployeesByEmail(String email);
 }
+```
+
+## Ex3.3
+
+Nota:
+```txt
+-> Este exercício não se encontra totalmente deselvolvido, sobretudo no que toca ao frontend. Queria ter adicionado código html para se poder adicionar movies o quotes, no entanto, só é possível através do uso do método post pelo link ou pelo postman. Outro aspeto que não tive tempo de mudar foi a relação Many-to-one entre a quote e o movie.
 ```
