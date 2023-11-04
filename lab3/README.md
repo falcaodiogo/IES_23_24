@@ -34,3 +34,21 @@ In `User.java` file in:
 @NotBlank(message = "Email is mandatory")
 private String email;
 ```
+
+## Ex3.2
+
+Image is anexed in this directory for exercise 3.2g)
+
+### Ex3.2 h) 
+```java
+@Override
+public List<Employee> getEmployeesByEmail(String email) {
+    return employeeRepository.getEmployeesByEmail(email);
+}
+```
+and
+```java
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+    List<Employee> getEmployeesByEmail(String email);
+}
+```
